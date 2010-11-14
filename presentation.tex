@@ -1,0 +1,140 @@
+\documentclass[16pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[polish]{babel}
+\usepackage{url}
+
+\input{pygments}
+
+\usetheme{Pittsburgh}
+\usenavigationsymbolstemplate{} % turn off navigation icons
+
+\author{Silesian Ruby Users Group\\
+  \footnotesize{Wojciech Wnętrzak}}
+\date{December 3, 2010}
+\title{Introduction to "Chef" framework}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+  \frametitle{What is Chef?}
+  \begin{itemize}
+    \item Open Source (Apache License v. 2.0)
+    \item Framework
+    \item Ruby
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Chef is young}
+  \begin{itemize}
+    \item Released on January 15th, 2009
+  \end{itemize}
+  \begin{figure}
+    \includegraphics[width=0.8\linewidth]{images/young-chef}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Why to use Chef?}
+  \begin{itemize}
+    \item Only one administration guy in company?
+    \item Forces order in system
+    \item Existing solutions for your problems
+    \item Best practices
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{How to use Chef?}
+  \begin{itemize}
+    \item \emph{chef-client} + \emph{chef-server}
+    \item \emph{chef-client} + Opscode Platform
+    \item \emph{chef-solo}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Chef Server}
+  \begin{itemize}
+    \item Ruby gem (\emph{chef-server})
+    \item Stores cookbooks
+    \item Stores information about nodes
+    \item Accessbile by REST API
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Chef Server elements}
+  \begin{itemize}
+    \item CouchDB -- stores node informations
+    \item SOLR -- data indexing
+    \item RabbitMQ -- helps in indexing
+    \item Merb -- API and web user interface
+  \end{itemize}
+  \pause
+  \begin{center}
+    \LARGE \color{red} That is lot of stuff!
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Opscode Platform}
+  \begin{itemize}
+    \item Free plan (upto 5 nodes)
+    \item Configuration step by step
+    \item Organizations and users managment
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Chef Client}
+  \begin{itemize}
+    \item Ruby gem (\emph{chef})
+    \item Runs on system that we want to configure
+    \item Communicates with chef server
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Chef Solo}
+  \begin{itemize}
+    \item Part of \emph{chef} gem
+    \item Standalone run (without connecting to server)
+    \item Uses cookbooks from local tarballs
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Simple Workflow}
+  \begin{itemize}
+    \item Write cookbook with recipe
+    \item Upload it to chef server
+    \item Define run list by:
+    \begin{description}
+      \item{---} editing node on chef server
+      \item{---} passing JSON file to chef-client
+    \end{description}
+    \item Run chef-client on desired machine
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tips}
+  \begin{itemize}
+    \item If using \emph{RVM}, use \emph{rvmsudo} for \emph{chef-client}
+    \item Take a look at chef bootstrap\footnote{\url{http://wiki.opscode.com/display/chef/Bootstrap+Chef+RubyGems+Installation}}
+  \end{itemize}
+\end{frame}
+
+% TODO: use somewhere
+\begin{frame}
+  \frametitle{Example Recipe\footnote{\url{https://github.com/37signals/37s_cookbooks/blob/master/redis/recipes/default.rb}}}
+  \input{listing/redis_recipe}
+  \label{redis_recipe}
+\end{frame}
+
+\end{document}

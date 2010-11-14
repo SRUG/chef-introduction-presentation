@@ -1,0 +1,15 @@
+*.toc
+*.aux
+*.log
+*.lof
+*.bib
+*.bbl
+*.blg
+*.out
+*.snm
+*.vrb
+*.nav
+*.pdf
+*.tex
+!presentation.tex
+!pygments.tex
