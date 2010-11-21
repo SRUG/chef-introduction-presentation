@@ -20,7 +20,7 @@
 \frame{\titlepage}
 
 \begin{frame}
-  \frametitle{What is Chef?}
+  \frametitle{What Is Chef?}
   \begin{itemize}
     \item Open Source (Apache License v. 2.0)
     \item Framework
@@ -29,7 +29,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Chef is young}
+  \frametitle{Chef Is Young}
   \begin{itemize}
     \item Released on January 15th, 2009
   \end{itemize}
@@ -39,7 +39,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Why to use Chef?}
+  \frametitle{Why To Use Chef?}
   \begin{itemize}
     \item Only one administration guy in company?
     \item Forces order in system
@@ -49,7 +49,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{How to use Chef?}
+  \frametitle{How To Use Chef?}
   \begin{itemize}
     \item \emph{chef-client} + \emph{chef-server}
     \item \emph{chef-client} + Opscode Platform
@@ -68,7 +68,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Chef Server elements}
+  \frametitle{Chef Server Elements}
   \begin{itemize}
     \item CouchDB -- stores node informations
     \item SOLR -- data indexing
@@ -137,11 +137,68 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{Example Attributes File}
+  \begin{footnotesize}
+    \input{listing/postgres_attributes}
+    \label{postgres_attributes}
+  \end{footnotesize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example Recipe File}
+  \begin{footnotesize}
+    \input{listing/postgres_server_recipe}
+    \label{postgres_server_recipe}
+    \end{footnotesize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Package Providers}
+  \begin{itemize}
+    \item apt
+    \item yum
+    \item macports
+  \end{itemize}
+  \begin{center}
+    \large Many more
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Resources}
+  \begin{itemize}
+    \item package
+    \item template
+    \item file
+    \item user
+    \item execute
+    \item script (bash, ruby, perl, python, csh)
+    \item http\_request
+    \item deploy
+  \end{itemize}
+  \pause
+  \begin{center}
+    \large Many more
+  \end{center}
+\end{frame}
+
+\begin{frame}
   \frametitle{Tips}
   \begin{itemize}
     \item If using \emph{RVM}, use \emph{rvmsudo} for \emph{chef-client}
     \item Take a look at chef bootstrap\footnote{\url{http://wiki.opscode.com/display/chef/Bootstrap+Chef+RubyGems+Installation}}
   \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Useful Links}
+  \begin{footnotesize}
+    \begin{itemize}
+      \item \url{http://www.opscode.com/chef/}
+      \item \url{http://help.opscode.com/faqs/start/how-to-get-started}
+      \item \url{https://github.com/opscode/cookbooks}
+    \end{itemize}
+  \end{footnotesize}
 \end{frame}
 
 % TODO: use somewhere
