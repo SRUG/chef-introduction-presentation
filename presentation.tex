@@ -155,17 +155,35 @@
 \begin{frame}
   \frametitle{Package Providers}
   \begin{itemize}
-    \item apt
-    \item yum
-    \item macports
+    \item Apt
+    \item Yum
+    \item MacPorts
   \end{itemize}
+  \pause
   \begin{center}
     \large Many more
   \end{center}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Resources}
+  \frametitle{Supported Systems}
+  \begin{itemize}
+    \item Debian
+    \item Gentoo
+    \item FreeBSD
+    \item MacOSX
+    \item Solaris
+    \pause
+    \item Windows
+  \end{itemize}
+  \pause
+  \begin{center}
+    \large And more
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Resources\footnote{\url{http://wiki.opscode.com/display/chef/Resources}}}
   \begin{itemize}
     \item package
     \item template
@@ -183,10 +201,19 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{Additional Tools - Ohai}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Additional Tools - Knife}
+\end{frame}
+
+\begin{frame}
   \frametitle{Tips}
   \begin{itemize}
     \item If using \emph{RVM}, use \emph{rvmsudo} for \emph{chef-client}
     \item Take a look at chef bootstrap\footnote{\url{http://wiki.opscode.com/display/chef/Bootstrap+Chef+RubyGems+Installation}}
+    \item Remember that Ruby (Chef) uses \emph{sh}, not \emph{bash}
   \end{itemize}
 \end{frame}
 
@@ -201,11 +228,11 @@
   \end{footnotesize}
 \end{frame}
 
-% TODO: use somewhere
 \begin{frame}
-  \frametitle{Example Recipe\footnote{\url{https://github.com/37signals/37s_cookbooks/blob/master/redis/recipes/default.rb}}}
-  \input{listing/redis_recipe}
-  \label{redis_recipe}
+  \frametitle{Thank You}
+  \begin{center}
+    \Huge Questions?
+  \end{center}
 \end{frame}
 
 \end{document}
