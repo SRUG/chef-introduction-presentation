@@ -8,6 +8,10 @@
 \input{pygments}
 
 \usetheme{Pittsburgh}
+\setbeamertemplate{items}[ball]
+
+%\beamertemplatesolidbackgroundcolor{black}
+%\setbeamercolor{normal text}{fg=white}
 \usenavigationsymbolstemplate{} % turn off navigation icons
 
 \author{Silesian Ruby Users Group\\
@@ -202,10 +206,19 @@
 
 \begin{frame}
   \frametitle{Additional Tools - Ohai}
+  \begin{itemize}
+    \item Released as a gem -- \emph{ohai}
+    \item Collects system configuration/information
+    \item Returns \emph{JSON}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{Additional Tools - Knife}
+  \begin{itemize}
+    \item Part of \emph{chef} gem
+    \item Console tool for chef server managment
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
