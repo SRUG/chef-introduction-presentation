@@ -5,15 +5,18 @@
 \usepackage[polish]{babel}
 \usepackage{url}
 
-\input{pygments-dark}
-
 \usetheme{Pittsburgh}
-\usecolortheme{seahorse}
-\setbeamertemplate{items}[ball]
 
+% Dark version:
+\input{pygments-dark}
+\usecolortheme{seahorse}
 \beamertemplatesolidbackgroundcolor{black}
 \setbeamercolor{normal text}{fg=white}
 
+% Light version:
+% \input{pygments-light}
+
+\setbeamertemplate{items}[ball]
 \usenavigationsymbolstemplate{} % turn off navigation icons
 
 \author{Silesian Ruby Users Group\\
@@ -31,6 +34,7 @@
     \item Open Source (Apache License v. 2.0)
     \item Framework
     \item Ruby
+    \item Infrastructure configuration management tool
   \end{itemize}
 \end{frame}
 
