@@ -12,4 +12,5 @@
 *.pdf
 *.tex
 !presentation.tex
-!pygments.tex
+!pygments-dark.tex
+!pygments-light.tex
