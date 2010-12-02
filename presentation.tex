@@ -106,7 +106,15 @@
     \item Ruby gem (\emph{chef})
     \item Runs on machine that we want to configure
     \item Communicates with chef server
+    \item Authenticates using RSA keys
   \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Server -- Clients}
+  \begin{figure}
+    \includegraphics[width=0.8\linewidth]{images/server-clients}
+  \end{figure}
 \end{frame}
 
 \begin{frame}
@@ -155,7 +163,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Example Recipe File}
+  \frametitle{PostgreSQL Server Recipe}
   \begin{footnotesize}
     \input{listing/postgres_server_recipe_simple}
     \label{postgres_server_recipe_simple}
