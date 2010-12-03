@@ -1,6 +1,8 @@
 include_recipe "postgresql::client"
 
-package "postgresql-#{node[:postgresql][:version]}"
+package "postgresql-#{node[:postgresql][:version]}" do
+  action :install
+end
 
 template "#{node[:postgresql][:dir]}/postgresql.conf" do
   source "postgresql.conf.erb"
