@@ -1,0 +1,12 @@
+== Usage
+Install following packages:
+
+* texlive
+* texlive-lang-polish
+* texlive-latex-extra
+* python-pygments
+
+In repo directory run:
+  rake
+
+Tested on Ubuntu
